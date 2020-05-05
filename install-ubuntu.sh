@@ -24,7 +24,7 @@ sudo apt-get install -y \
     reprepro
 
 # download and install driver
-git submodule update --init --recursive
+git submodule update --init --recursive linux-sgx-driver
 (cd driver && ./install-ubuntu.sh)
 
 # download prebuilt binaries
