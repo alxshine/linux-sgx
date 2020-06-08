@@ -30,6 +30,8 @@
 #
 
 set -e
+docker build  --target builder --build-arg https_proxy=$https_proxy \
+              --build-arg http_proxy=$http_proxy -t sgx_builder -f ./Dockerfile ../../
 docker build  --target aesm --build-arg https_proxy=$https_proxy \
               --build-arg http_proxy=$http_proxy -t sgx_aesm -f ./Dockerfile ../../
 
